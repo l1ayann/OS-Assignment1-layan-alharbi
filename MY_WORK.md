@@ -291,7 +291,7 @@ Multithreading concepts can be used in many applications that need to perform mu
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+A process is an independent program, while a thread is a smaller execution unit that works inside a program. In my code, the Process class represents a simulated process and it implements the Runnable interface. The method addProcessToQueue() creates a new thread using new Thread(process) and adds it to the ready queue. Threads are used in this assignment because they allow the processes to be executed and managed inside the same Java program.
 
 ## Question 2: Ready Queue Behavior
 
@@ -302,16 +302,23 @@ Multithreading concepts can be used in many applications that need to perform mu
 > 💡 **TIP:** Pick a process with a large burst time (e.g., more than 2 × time quantum) and count how many "added to ready queue" lines it has after the first one. Search your console for its name (e.g., `P3`).
 
 **Your Answer:** *(3-5 sentences)*
+When a process does not finish during its time quantum, the scheduler adds it back to the ready queue to continue later. In my output, P3 had a burst time of 12026ms and ran for a quantum of 5000ms, but it still had 7026ms remaining. The code checks if the process is not finished and uses addProcessToQueue() to return it to the queue. This re-queueing is important because it gives other processes a chance to run and keeps the scheduling fair.
 
-[Write your answer here.]
+
+
 
 Example from my output:
-```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
-```
+
+P3 (Priority: 9) added to ready queue
+P3 executing quantum [5000ms]
+P3 completed quantum 5000ms
+Remaining time: 7026ms
+P3 yields CPU for context switch
+P3 (Priority: 9) added to ready queue
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+
+This output shows that P3 did not finish after its first quantum because it still had remaining time. The scheduler returned P3 to the ready queue so it could continue execution in another turn.
 
 ## Question 3: Thread Lifecycle
 
@@ -339,32 +346,33 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): CPU Scheduling
 
 **Description**:
-[Describe the real-world scenario.]
+An operating system runs many programs at the same time. Each program needs CPU time to do its work. The operating system gives each process a small amount of time to run.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin helps give each process a fair chance to use the CPU. The time quantum limits how long each process can run in one turn. This is similar to the scheduling idea used in my simulation.
 
-### Example 2: [Name of application/scenario]
+### Example 2: Tasks in an Application
 
 **Description**:
-[Describe the real-world scenario or application.]
+An application may have several background tasks, such as loading data and updating the screen. Each task needs time to do its work. A scheduler can take turns between tasks instead of letting one task use all the time.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin can help tasks get a fair share of processing time. The time quantum sets the time for each turn, and a context switch happens when the scheduler moves to another task. This can help the application stay responsive while different tasks are running.
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1. I understood the difference between processes and threads.
+2. I learned how to modify an existing Java project and add new features.
+3. I understood how ready queues and scheduling manage execution.
+
 
 **Concepts I need to study more:**
-1.
-2.
+1. Advanced multithreading concepts.
+2. More CPU scheduling algorithms.
 
 ---
 
