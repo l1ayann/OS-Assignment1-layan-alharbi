@@ -129,68 +129,90 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 6, 2026, 4:00 PM]
+**What I did**:Forked the repository and prepared the project environment.
 
-**Details**:
+**Details**:- Read the README file to understand the assignment requirements.
+- Opened SchedulerSimulation.java and reviewed the existing code.
+- Updated my student ID in the program.
+- Ran the program to check that it worked correctly.
+- Committed the changes.
 
-**Challenges**:
+**Challenges**:Understanding the structure of the existing scheduler code was difficult at first.
 
-**Solution**:
+**Solution**:I read the code carefully and tested the program before making changes.
 
-**Time spent**:
-
----
-
-### Entry 2 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Time spent**:45 minutes.
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 9, 2026, 3:30 PM]
+**What I did**: Implemented Feature 1: Process Priority.
 
-**Details**:
+**Details**:Added a priority field to the Process class.
 
-**Challenges**:
+Generated random priority values from 1 to 10.
 
-**Solution**:
+Added a getter method for priority.
 
-**Time spent**:
+Updated the output to display each process priority.
 
----
+Committed the changes.
 
-### Entry 4 - [Date and Time]
-**What I did**:
+**Challenges**:Making sure priority only displays information and does not change Round-Robin scheduling.
 
-**Details**:
+**Solution**:I tested the output and confirmed that processes still followed the ready queue order.
 
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Time spent**:1 hour.
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 10, 2026, 1:30 PM]
+**What I did**:Implemented Feature 2: Context Switch Counter.
 
-**Details**:
+**Details**:- Added a context switch counter variable.
+- Increased the counter when a new process started running.
+- Displayed the total context switches after completion.
+- Tested the program output.
+- Committed the changes.
 
-**Challenges**:
+**Challenges**:Finding the correct place to increase the counter.
 
-**Solution**:
+**Solution**:I placed the counter before currentThread.start() because it represents a new process execution.
 
-**Time spent**:
+**Time spent**:40 minutes.
+
+---
+
+### Entry 4 - [October 10, 2026, 4:30 PM]
+**What I did**:Implemented Feature 3: Waiting Time Tracking.
+
+**Details**:- Added variables to track waiting time.
+- Added methods to calculate waiting and turnaround time.
+- Created the summary table.
+- Tested the final output.
+
+**Challenges**:Calculating waiting time when processes return to the ready queue.
+
+**Solution**:I updated the ready time when a process entered the queue again and calculated the waiting duration before execution.
+
+**Time spent**:1.5 hours.
+
+---
+
+### Entry 5 - [October 10, 2026, 6:00 PM]
+**What I did**:Completed documentation and final testing.
+
+**Details**:- Completed MY_WORK.md reflection and technical answers.
+- Checked all implemented features.
+- Reviewed program output.
+- Verified GitHub commits and repository status.
+
+**Challenges**:Checking that all assignment requirements were completed.
+
+**Solution**:I reviewed the README instructions and final checklist.
+
+**Time spent**:1 hour.
 
 ---
 
@@ -211,13 +233,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**:5 hours approximately.
 
-**Most challenging part**:
+**Most challenging part**:Understanding the existing scheduler code and adding new features without changing the original Round-Robin behavior.
 
-**Most interesting learning**:
+**Most interesting learning**:I learned how threads, ready queues, and CPU scheduling work together.
 
-**What I would do differently next time**:
+**What I would do differently next time**:I would start documenting my progress earlier and test every feature after adding it.
 
 ---
 
@@ -328,15 +350,15 @@ This output shows that P3 did not finish after its first quantum because it stil
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+New: P1 is in the New state when it is created using new Thread(process) inside addProcessToQueue().
 
-2. **Runnable**: [When does P1 become Runnable?]
+Runnable: P1 becomes Runnable when the scheduler calls currentThread.start(), making it ready to execute.
 
-3. **Running**: [When is P1 Running?]
+Running: P1 is Running when its thread executes the Process.run() method and simulates process execution.
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+Waiting: P1's thread enters Timed Waiting when Thread.sleep(stepTime) pauses its execution. The main thread waits at currentThread.join() until P1's thread finishes.
 
-5. **Terminated**: [When is P1 Terminated?]
+Terminated: P1's thread becomes Terminated when its run() method finishes executing.
 
 ## Question 4: Real-World Applications
 
