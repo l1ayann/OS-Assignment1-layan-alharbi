@@ -237,23 +237,21 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+During this assignment, I learned how to work with an existing Java program that uses multithreading concepts. I learned that threads can help organize the execution of different tasks inside the same program. I used Visual Studio Code to edit the code, run the program, and check the results after my changes. I also learned how to add new features without affecting the original program behavior. Adding priority, context switch counting, and waiting time tracking helped me understand how program information can be collected and displayed. This assignment improved my confidence in modifying Java code and working with GitHub.
 
 ## Question 2: What was the most challenging part of this assignment?
 
 > 💡 **TIP:** Pick **one** specific challenge (understanding the code, one of the features, Git, the video) and say *why* it was hard.
 
 **Your Answer:** *(5-7 sentences)*
-
-[Write your answer here.]
+The most challenging part of this assignment was understanding the existing code before making changes. The provided SchedulerSimulation.java file had many parts that I needed to review before adding my features. The waiting time feature was the hardest because I needed to add the calculation without causing problems in the original code. I also needed to make sure that the priority feature only displayed information and did not change the existing scheduling behavior. I solved this by testing my changes and checking the program output after each modification. This helped me understand how to work with a larger code project
 
 ## Question 3: How did you overcome the challenges you faced?
 
 > 💡 **TIP:** Describe your method: reading documentation, adding `System.out.println` to debug, re-reading the README, testing after each small change, asking for help.
 
 **Your Answer:** *(5-7 sentences)*
-
-[Write your answer here.]
+I overcame the challenges by following the instructions in the README file and working step by step. I used Visual Studio Code to test the program after adding each feature. I also used GitHub to save my progress and organize my commits. When I faced difficulties, I reviewed the code and checked where the new features should be added. Testing after every change helped me find mistakes and fix them. This process made my work more organized and helped me complete the assignment successfully.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +259,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+Multithreading concepts can be used in many applications that need to perform multiple tasks. For example, mobile applications can use different threads to handle user actions and background tasks. Web browsers also use threads to load content and respond to user input. Operating systems use similar concepts to manage different programs efficiently. Learning about threads helped me understand how applications can run tasks in an organized way. The concepts from this assignment can help in developing faster and more responsive programs.
 
 ### Optional: What would you like to learn more about?
 
